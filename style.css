@@ -1,0 +1,206 @@
+/* Optimize and organize styles */
+:root {
+  --primary: #ff5e62;
+  --bg-white: rgba(255, 255, 255, 0.9);
+  --primary-gradient: linear-gradient(to right, #ff9966, #ff5e62);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --transition: transform 0.3s ease;
+}
+
+/* Base styles */
+body {
+  background: linear-gradient(to right, #ff9966, var(--primary));
+  width: 100%;
+}
+
+.navbar {
+  background: var(--primary-gradient);
+}
+
+/* Component styles */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  /* Add spacing between hero cards */
+}
+
+.hero {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  padding: 20px;
+  max-width: 350px; /* Control card width */
+}
+
+.hero-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #ff5e62;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  object-fit: contain;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 10px;
+}
+/* Footer */
+.footer {
+  background: var(--primary-gradient);
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844226_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  position: relative;
+  padding: 50px 0;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 45px;
+}
+
+.footer::before {
+  content: "Let's connect,collaborate and grow together";
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 30px;
+  margin-top: 12px;
+  gap: 15px;
+  color: #fff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer ul li {
+  margin: 0 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .center {
+    flex-direction: column;
+  }
+
+  .hero {
+    width: 100%;
+  }
+}
+
+/* Story section */
+.story {
+  position: relative !important;
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  padding: 80px 0 !important;
+  isolation: isolate !important;
+  z-index: 1 !important;
+  min-height: 500px !important; /* Ensure minimum height for visibility */
+}
+
+.story::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: var(--bg-white) !important;
+  z-index: -1 !important;
+  opacity: 0.9 !important; /* Ensure overlay visibility */
+}
+
+.story .container {
+  position: relative !important;
+  z-index: 2 !important;
+  padding: 30px !important;
+  background: transparent !important; /* Ensure container doesn't block background */
+}
+
+.story h1 {
+  margin-bottom: 30px !important;
+  color: #333 !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+.story p {
+  margin-bottom: 20px !important;
+  color: #666 !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* Update hero section styling */
+hero {
+  background: var(--bg-white);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-5px);
+}
+
+/* Add hero images */
+.hero-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
