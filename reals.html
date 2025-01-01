@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Reels Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      Base styles * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 2.5rem;
+      }
+
+      .reels-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .reel-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .reel-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .reel-thumbnail {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+
+      .reel-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.9);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .play-button i {
+        color: #333;
+        font-size: 1.2rem;
+      }
+
+      .reel-info {
+        padding: 1.5rem;
+      }
+
+      .reel-info h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .reel-info p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .watch-btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: #0095f6;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .watch-btn:hover {
+        background: #0074cc;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .reels-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 4rem;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-overlay h1 {
+        color: white;
+        font-size: 3.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 300px;
+          margin-bottom: 2rem;
+        }
+
+        .hero-overlay h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <img
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+          alt="Productivity Hero Image"
+          class="hero-image"
+        />
+        <div class="hero-overlay">
+          <h1>Productivity Insights</h1>
+        </div>
+      </div>
+      <div class="reels-grid">
+        <div class="reel-card">
+          <div class="reel-thumbnail">
+            <!-- 1 -->
+            <img
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+              alt="Ali Abdaal Reel"
+            />
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="reel-info">
+            <h3>Daily Productivity Tips</h3>
+            <p>@aliabdaal</p>
+            <a
+              href="https://www.instagram.com/aliabdaal/reel/C7GmE8lo008/"
+              class="watch-btn"
+              >Watch Reel</a
+            >
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="reel-card">
+          <div class="reel-thumbnail">
+            <!-- 2 -->
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173"
+              alt="Study Tips Reel"
+            />
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="reel-info">
+            <h3>Effective Study Methods</h3>
+            <p>@studywithalex</p>
+            <a href="https://www.instagram.com/studywithalex/" class="watch-btn"
+              >Watch Reel</a
+            >
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1495465798138-718f86d1a4bc"
+              alt="Time Management Reel"
+            />
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="reel-info">
+            <h3>Time Management Hacks</h3>
+            <p>@productivitypro</p>
+            <a
+              href="https://www.instagram.com/productivitypro/"
+              class="watch-btn"
+              >Watch Reel</a
+            >
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b"
+              alt="Morning Routine Reel"
+            />
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="reel-info">
+            <h3>5AM Morning Routine</h3>
+            <p>@morningmotivation</p>
+            <a
+              href="https://www.instagram.com/morningmotivation/"
+              class="watch-btn"
+              >Watch Reel</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   // Array of reel data
+      //   const reels = [
+      //     {
+      //       creator: "@aliabdaal",
+      //       title: "Daily Productivity Tips",
+      //       url: "https://www.instagram.com/aliabdaal/reel/C7GmE8lo008/",
+      //       image: "https://source.unsplash.com/random/400x400?productivity,1",
+      //     },
+      //     {
+      //       creator: "@alibonar",
+      //       title: "Productivity Hacks",
+      //       url: "https://www.instagram.com/alibonar/reel/Cve-rEIvcG6/",
+      //       image: "https://source.unsplash.com/random/400x400?productivity,2",
+      //     },
+      //     {
+      //       creator: "@jakebeau_",
+      //       title: "Time Management Tips",
+      //       url: "https://www.instagram.com/jakebeau_/reel/DDsqNgbONxs/",
+      //       image: "https://source.unsplash.com/random/400x400?productivity,3",
+      //     },
+      //     {
+      //       creator: "@hormozi",
+      //       title: "Business Growth Strategies",
+      //       url: "https://www.instagram.com/hormozi/reel/C3y-lCQtZNh/",
+      //       image: "https://source.unsplash.com/random/400x400?productivity,4",
+      //     },
+      //     {
+      //       creator: "@batooloncare",
+      //       title: "Business Growth Strategies",
+      //       url: "https://www.instagram.com/reels/C_0wZCngtkX/",
+      //       image: "https://source.unsplash.com/random/400x400?productivity,5",
+      //     },
+      //   ];
+
+      //   // Function to remove duplicate reels
+      //   const uniqueReels = reels.filter(
+      //     (reel, index, self) => index === self.findIndex((r) => r.url === reel.url)
+      //   );
+
+      //   // Generate reel cards dynamically
+      //   const reelsGrid = document.querySelector(".reels-grid");
+
+      //   uniqueReels.forEach((reel) => {
+      //     const card = `
+      //             <div class="reel-card">
+      //                 <div class="reel-thumbnail">
+      //                     <img src="${reel.image}" alt="${reel.title}">
+      //                     <div class="play-button">
+      //                         <i class="fas fa-play"></i>
+      //                     </div>
+      //                 </div>
+      //                 <div class="reel-info">
+      //                     <h3>${reel.title}</h3>
+      //                     <p>${reel.creator}</p>
+      //                     <a href="${reel.url}" class="watch-btn" target="_blank">Watch Reel</a>
+      //                 </div>
+      //             </div>
+      //         `;
+      //     reelsGrid.innerHTML += card;
+      //   });
+
+      //   // Add hover effect to play buttons
+      //   const playButtons = document.querySelectorAll(".play-button");
+      //   playButtons.forEach((button) => {
+      //     button.addEventListener("mouseover", function () {
+      //       this.style.background = "rgba(255, 255, 255, 1)";
+      //     });
+      //     button.addEventListener("mouseout", function () {
+      //       this.style.background = "rgba(255, 255, 255, 0.9)";
+      //     });
+      //   });
+      // });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Array of reel data
+        const reels = [
+          {
+            creator: "@aliabdaal",
+            title: "Daily Productivity Tips",
+            url: "https://www.instagram.com/aliabdaal/reel/C7GmE8lo008/",
+            image:
+              "https://tse4.mm.bing.net/th?id=OIP.YS6UAyVkxV27rofjs9lvJQHaE8&pid=Api", // Updated image
+          },
+          {
+            creator: "@alibonar",
+            title: "Productivity Hacks",
+            url: "https://www.instagram.com/alibonar/reel/Cve-rEIvcG6/",
+            image:
+              "https://tse3.mm.bing.net/th?id=OIP.X9tbmsPVDniPwZJWdzneigHaLH&pid=Api", // Updated image
+          },
+          {
+            creator: "@jakebeau_",
+            title: "Time Management Tips",
+            url: "https://www.instagram.com/jakebeau_/reel/DDsqNgbONxs/",
+            image:
+              "https://tse1.mm.bing.net/th?id=OIP.5ommNOmKryAHH-dg78e_cwHaGf&pid=Api", // Updated image
+          },
+          {
+            creator: "@hormozi",
+            title: "Business Growth Strategies",
+            url: "https://www.instagram.com/hormozi/reel/C3y-lCQtZNh/",
+            image:
+              "https://tse1.mm.bing.net/th?id=OIP.rQGAo57dejJSr-wzItT7QgHaJQ&pid=Api", // Updated image
+          },
+          {
+            creator: "@batooloncare",
+            title: "Self-Care and Productivity",
+            url: "https://www.instagram.com/reels/C_0wZCngtkX/",
+            image:
+              "https://tse3.mm.bing.net/th?id=OIP.KzQc0rWPGpO0bGNF4d9ATQHaHa&pid=Api", // Updated image
+          },
+        ];
+
+        // Function to remove duplicate reels
+        const uniqueReels = reels.filter(
+          (reel, index, self) =>
+            index === self.findIndex((r) => r.url === reel.url)
+        );
+
+        // Generate reel cards dynamically
+        const reelsGrid = document.querySelector(".reels-grid");
+
+        uniqueReels.forEach((reel) => {
+          const card = `
+            <div class="reel-card">
+                <div class="reel-thumbnail">
+                    <img src="${reel.image}" alt="${reel.title}">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="reel-info">
+                    <h3>${reel.title}</h3>
+                    <p>${reel.creator}</p>
+                    <a href="${reel.url}" class="watch-btn" target="_blank">Watch Reel</a>
+                </div>
+            </div>
+        `;
+          reelsGrid.innerHTML += card;
+        });
+
+        // Add hover effect to play buttons
+        const playButtons = document.querySelectorAll(".play-button");
+        playButtons.forEach((button) => {
+          button.addEventListener("mouseover", function () {
+            this.style.background = "rgba(255, 255, 255, 1)";
+          });
+          button.addEventListener("mouseout", function () {
+            this.style.background = "rgba(255, 255, 255, 0.9)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
