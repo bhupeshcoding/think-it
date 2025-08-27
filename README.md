@@ -30,7 +30,7 @@ The project has been deployed **114 times** and is accessible via the portfolio 
 
 ## Development Stats
 
-- **Commits**: 52
+
 - **Languages**:
   - HTML: 92.3%
   - CSS: 7.7%
@@ -45,7 +45,7 @@ The project has been deployed **114 times** and is accessible via the portfolio 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache 2.0](LICENSE).
 
 ## Contact
 
